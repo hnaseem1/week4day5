@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Awesome site!</title>
+  </head>
+  <body>
+    <h1>Hello world</h1>
+
+    <p><%= @current_time %></p>
+    <p>My name is Hasan Naseem and this is what I do everyday</p>
+
+    <ul>
+      <% @list.each do |item| %>
+        <li>
+          <%= item %>
+        </li>
+      <% end %>
+    </ul>
+
+    <ul>
+      <h1>My Skills Are</h1>
+      <% @skills.each do |item| %>
+        <li>
+          <%= item %>
+        </li>
+      <% end %>
+    </ul>
+
+    <ul>
+      <h1>My Interests Are</h1>
+      <% @interest.each do |item| %>
+        <li>
+          <%= item %>
+        </li>
+      <% end %>
+    </ul>
+
+    <a href="/gallery">Gallery</a>
+    <a href="/">Home</a>
+
+  </body>
+</html>
