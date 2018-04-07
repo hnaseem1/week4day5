@@ -4,10 +4,10 @@ require 'sinatra'
 # ROUTE - HTTP Verb + PATH
 
 get '/' do
-  redirect to('/hello')
+  redirect to('/home')
 end
 
-get '/hello' do
+get '/home' do
 
   # Must be the very last line
   #send_file 'views/hello.erb'
@@ -22,12 +22,14 @@ get '/hello' do
     'Buy groceries'
   ]
 
-  erb :hello
+  erb :home
 end
 
 get '/gallery' do
 
-  erb :gallery
+  redirect to('/portfolio')
+
+
 end
 
 get '/about' do
@@ -47,4 +49,8 @@ end
 get '/favourites' do
   @fav_links = ["http://www.facebook.com", "www.twitter.com", 'www.orkut.com', 'www.youtube.com']
   erb :favourites
+end
+
+get '/portfolio' do
+  erb :portfolio
 end
